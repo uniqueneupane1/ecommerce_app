@@ -9,7 +9,7 @@
     },
     {
       "name": "bloc",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/bloc-8.1.0",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/bloc-8.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -45,15 +45,15 @@
     },
     {
       "name": "crypto",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/crypto-3.0.2",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/crypto-3.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.19"
     },
     {
       "name": "cupertino_icons",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.6",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.19"
     },
     {
       "name": "email_validator",
@@ -69,15 +69,9 @@
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/ffi-2.0.1",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/ffi-2.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
-      "name": "file",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/file-6.1.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter",
@@ -87,7 +81,7 @@
     },
     {
       "name": "flutter_bloc",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/flutter_bloc-8.1.1",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/flutter_bloc-8.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -99,15 +93,15 @@
     },
     {
       "name": "google_fonts",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/google_fonts-3.0.1",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/google_fonts-6.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/http-0.13.5",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/http-1.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.2"
     },
     {
       "name": "http_parser",
@@ -147,9 +141,9 @@
     },
     {
       "name": "page_transition",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/page_transition-2.0.9",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/page_transition-2.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "path",
@@ -159,67 +153,55 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider-2.0.11",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_android-2.0.22",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_android-2.2.2",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
-      "name": "path_provider_ios",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_ios-2.0.11",
+      "name": "path_provider_foundation",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.7",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "path_provider_macos",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_macos-2.0.6",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.19"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.5",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.3",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.19"
     },
     {
       "name": "platform",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/platform-3.1.0",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/platform-3.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.3",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "process",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/process-4.2.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "provider",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/provider-6.0.5",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/provider-6.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -267,9 +249,9 @@
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/typed_data-1.3.1",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "vector_math",
@@ -285,15 +267,15 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/win32-3.1.3",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/win32-5.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.2"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/xdg_directories-0.2.0+2",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/xdg_directories-1.0.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "ecommerce_app",
@@ -302,7 +284,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-01-29T02:33:50.984911Z",
+  "generated": "2024-01-29T02:40:32.493332Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }
