@@ -6,6 +6,7 @@ import 'package:ecommerce_app/features/dashboard/ui/screens/dashboard_screens.da
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:page_transition/page_transition.dart';
 
 class LoginWidgets extends StatefulWidget {
@@ -16,10 +17,7 @@ class LoginWidgets extends StatefulWidget {
 }
 
 class _LoginWidgetsState extends State<LoginWidgets> {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormBuilderState> _formKey = GlobalKey<FormBuilderState>();
 
   @override
   Widget build(BuildContext context) {
@@ -33,15 +31,15 @@ class _LoginWidgetsState extends State<LoginWidgets> {
           padding: const EdgeInsets.symmetric(
             horizontal: CustomTheme.horizontalPadding,
           ),
-          child: Form(
+          child: FormBuilder(
             key: _formKey,
             child: Column(
               children: [
                 const SizedBox(height: 20),
                 CustomTextField(
+                  fieldName: "email",
                   label: "Email Address",
                   hintText: "Enter Email Address",
-                  controller: _emailController,
                   validator: (val) {
                     if (val == null || val.isEmpty) {
                       return "Email field cannot be empty";
@@ -56,8 +54,8 @@ class _LoginWidgetsState extends State<LoginWidgets> {
                 ),
                 CustomTextField(
                   label: "Password",
+                  fieldName: "password",
                   hintText: "Enter Password",
-                  controller: _passwordController,
                   obscureText: true,
                   validator: (val) {
                     if (val == null || val.isEmpty) {

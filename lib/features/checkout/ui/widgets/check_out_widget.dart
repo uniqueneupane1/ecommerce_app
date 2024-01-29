@@ -13,10 +13,6 @@ class CheckoutWidgets extends StatefulWidget {
 }
 
 class _CheckoutWidgetsState extends State<CheckoutWidgets> {
-  final TextEditingController _cityController = TextEditingController();
-  final TextEditingController _addressController = TextEditingController();
-  final TextEditingController _phoneNumberController = TextEditingController();
-  final TextEditingController _fullNameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,18 +36,22 @@ class _CheckoutWidgetsState extends State<CheckoutWidgets> {
                 CustomTextField(
                   label: "Full Name",
                   hintText: "Full Name",
+                  fieldName: "full_name",
                 ),
                 CustomTextField(
                   label: "Phone Number",
                   hintText: "Phone Number",
+                  fieldName: "phone_number",
                 ),
                 CustomTextField(
                   label: "City",
                   hintText: "City",
+                  fieldName: "city",
                 ),
                 CustomTextField(
                   label: "Address",
                   hintText: "Address",
+                  fieldName: "address",
                 ),
                 CustomRoundedButtom(
                   title: "Confirm Order",

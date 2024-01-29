@@ -4,6 +4,7 @@ import 'package:ecommerce_app/common/textfield/custom_textfield.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class SignupWidgets extends StatefulWidget {
   const SignupWidgets({Key? key}) : super(key: key);
@@ -13,15 +14,7 @@ class SignupWidgets extends StatefulWidget {
 }
 
 class _SignupWidgetsState extends State<SignupWidgets> {
-  final TextEditingController _fullNameController = TextEditingController();
-  final TextEditingController _addressController = TextEditingController();
-  final TextEditingController _phoneNumberController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController =
-      TextEditingController();
-
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormBuilderState> _formKey = GlobalKey<FormBuilderState>();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +23,7 @@ class _SignupWidgetsState extends State<SignupWidgets> {
 
     return Scaffold(
       appBar: AppBar(backgroundColor: CustomTheme.primaryColor),
-      body: Form(
+      body: FormBuilder(
         key: _formKey,
         child: SingleChildScrollView(
           child: Container(
@@ -42,8 +35,8 @@ class _SignupWidgetsState extends State<SignupWidgets> {
                 const SizedBox(height: 20),
                 CustomTextField(
                   label: "Full name",
+                  fieldName: "full_name",
                   hintText: "Enter Full Name",
-                  controller: _fullNameController,
                   validator: (val) {
                     if (val == null || val.isEmpty) {
                       return "Full Name cannot be empty";
@@ -54,7 +47,7 @@ class _SignupWidgetsState extends State<SignupWidgets> {
                 CustomTextField(
                   label: "Phone Number",
                   hintText: "Enter Phone Number",
-                  controller: _phoneNumberController,
+                  fieldName: "phone_number",
                   textInputType: TextInputType.phone,
                   validator: (val) {
                     if (val == null || val.isEmpty) {
@@ -66,7 +59,7 @@ class _SignupWidgetsState extends State<SignupWidgets> {
                 CustomTextField(
                   label: "Address",
                   hintText: "Enter Address",
-                  controller: _addressController,
+                  fieldName: "address",
                   validator: (val) {
                     if (val == null || val.isEmpty) {
                       return "Address cannot be empty";
@@ -77,7 +70,7 @@ class _SignupWidgetsState extends State<SignupWidgets> {
                 CustomTextField(
                   label: "Email Address",
                   hintText: "Enter Email Address",
-                  controller: _emailController,
+                  fieldName: "email",
                   validator: (val) {
                     if (val == null || val.isEmpty) {
                       return "Email field cannot be empty";
@@ -93,7 +86,7 @@ class _SignupWidgetsState extends State<SignupWidgets> {
                 CustomTextField(
                   label: "Password",
                   hintText: "Enter Password",
-                  controller: _passwordController,
+                  fieldName: "password",
                   obscureText: true,
                   validator: (val) {
                     if (val == null || val.isEmpty) {
@@ -108,13 +101,14 @@ class _SignupWidgetsState extends State<SignupWidgets> {
                 CustomTextField(
                   label: "Confirm Password",
                   hintText: "Enter Confirm Password",
-                  controller: _confirmPasswordController,
+                  fieldName: "confirm_password",
                   validator: (val) {
                     if (val == null || val.isEmpty) {
                       return "Confirm Password field cannot be empty";
                     } else if (val.length < 4) {
                       return "Password field must be at least 4 character long";
-                    } else if (val != _passwordController.text) {
+                    } else if (val !=
+                        _formKey.currentState!.instantValue["password"]) {
                       return "Password doesnot matched";
                     } else {
                       return null;
