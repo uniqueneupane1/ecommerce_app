@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Ecommerce',
       theme: ThemeData(
         primaryColor: CustomTheme.primaryColor,
+        useMaterial3: false,
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: const SplashPage(),
