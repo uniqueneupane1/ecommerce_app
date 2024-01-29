@@ -37,7 +37,7 @@ class CustomTextField extends StatelessWidget {
         children: [
           Text(
             label,
-            style: _textTheme.headline6!.copyWith(
+            style: _textTheme.titleLarge!.copyWith(
               fontWeight: FontWeight.w500,
               fontSize: 14,
             ),
@@ -45,7 +45,7 @@ class CustomTextField extends StatelessWidget {
           const SizedBox(height: 12),
           Container(
             child: TextFormField(
-              style: _textTheme.headline6!.copyWith(
+              style: _textTheme.titleLarge!.copyWith(
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
               ),
@@ -89,7 +89,7 @@ class CustomTextField extends StatelessWidget {
                 ),
                 counterText: "",
                 hintText: hintText,
-                hintStyle: _textTheme.headline6!.copyWith(
+                hintStyle: _textTheme.titleLarge!.copyWith(
                   color: CustomTheme.lightGray,
                   fontSize: 14,
                 ),

@@ -134,11 +134,11 @@ class _SignupWidgetsState extends State<SignupWidgets> {
                 RichText(
                   text: TextSpan(
                     text: "Already have account?",
-                    style: _textTheme.bodyText2,
+                    style: _textTheme.bodyMedium,
                     children: [
                       TextSpan(
                         text: " Sign In",
-                        style: _textTheme.bodyText2!.copyWith(
+                        style: _textTheme.bodyMedium!.copyWith(
                           color: CustomTheme.primaryColor,
                           fontWeight: FontWeight.w600,
                         ),

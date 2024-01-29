@@ -64,7 +64,7 @@ class CustomRoundedButtomState extends State<CustomRoundedButtom> {
                 children: [
                   Text(
                     widget.title,
-                    style: _theme.textTheme.headline3!.copyWith(
+                    style: _theme.textTheme.displaySmall!.copyWith(
                       fontWeight: widget.fontWeight,
                       color: widget.textColor,
                       fontSize: widget.fontSize,

@@ -88,11 +88,11 @@ class _LoginWidgetsState extends State<LoginWidgets> {
                 RichText(
                   text: TextSpan(
                     text: "Don't have account?",
-                    style: _textTheme.bodyText2,
+                    style: _textTheme.bodyMedium,
                     children: [
                       TextSpan(
                         text: " Sign Up",
-                        style: _textTheme.bodyText2!.copyWith(
+                        style: _textTheme.bodyMedium!.copyWith(
                           color: CustomTheme.primaryColor,
                           fontWeight: FontWeight.w600,
                         ),
