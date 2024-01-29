@@ -8,6 +8,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "back_button_interceptor",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/back_button_interceptor-7.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "bloc",
       "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/bloc-8.1.2",
       "packageUri": "lib/",
@@ -110,8 +116,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "loading_overlay",
-      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/loading_overlay-0.3.0",
+      "name": "loader_overlay",
+      "rootUri": "file:///Users/sumitkakshapati/.pub-cache/hosted/pub.dev/loader_overlay-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -284,7 +290,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-01-29T02:40:32.493332Z",
+  "generated": "2024-01-29T12:33:15.901476Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

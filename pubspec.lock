@@ -9,6 +9,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
+  back_button_interceptor:
+    dependency: transitive
+    description:
+      name: back_button_interceptor
+      sha256: "4ab10ffce4d459c50cde34abb6c653e0497f63072e1ee305c1073eb092245162"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.1"
   bloc:
     dependency: transitive
     description:
@@ -139,14 +147,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  loading_overlay:
+  loader_overlay:
     dependency: "direct main"
     description:
-      name: loading_overlay
-      sha256: a4dd5a790e0d60568d4c684e46eed00de883db0dc660f90ffd583aca8f4a1d91
+      name: loader_overlay
+      sha256: "02deeeed0d4eaaeeada6ce7bb13426d7548acad1f71e4884ec4a010e0e4824d6"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.0"
+    version: "4.0.0"
   matcher:
     dependency: transitive
     description:
@@ -362,4 +370,4 @@ packages:
     version: "1.0.4"
 sdks:
   dart: ">=3.2.0 <4.0.0"
-  flutter: ">=3.10.0"
+  flutter: ">=3.16.0"

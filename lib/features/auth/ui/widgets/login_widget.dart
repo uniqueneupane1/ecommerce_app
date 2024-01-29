@@ -6,7 +6,6 @@ import 'package:ecommerce_app/features/dashboard/ui/screens/dashboard_screens.da
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:loading_overlay/loading_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 
 class LoginWidgets extends StatefulWidget {
@@ -20,8 +19,6 @@ class _LoginWidgetsState extends State<LoginWidgets> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  bool _isLoading = false;
-
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
@@ -29,94 +26,91 @@ class _LoginWidgetsState extends State<LoginWidgets> {
     final _theme = Theme.of(context);
     final _textTheme = _theme.textTheme;
 
-    return LoadingOverlay(
-      isLoading: _isLoading,
-      child: Scaffold(
-        appBar: AppBar(backgroundColor: CustomTheme.primaryColor),
-        body: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: CustomTheme.horizontalPadding,
-            ),
-            child: Form(
-              key: _formKey,
-              child: Column(
-                children: [
-                  const SizedBox(height: 20),
-                  CustomTextField(
-                    label: "Email Address",
-                    hintText: "Enter Email Address",
-                    controller: _emailController,
-                    validator: (val) {
-                      if (val == null || val.isEmpty) {
-                        return "Email field cannot be empty";
-                      }
-                      final _isvalid = EmailValidator.validate(val);
-                      if (_isvalid) {
-                        return null;
-                      } else {
-                        return "Enter valid email address";
-                      }
-                    },
-                  ),
-                  CustomTextField(
-                    label: "Password",
-                    hintText: "Enter Password",
-                    controller: _passwordController,
-                    obscureText: true,
-                    validator: (val) {
-                      if (val == null || val.isEmpty) {
-                        return "Password field cannot be empty";
-                      } else if (val.length < 4) {
-                        return "Password field must be at least 4 character long";
-                      } else {
-                        return null;
-                      }
-                    },
-                  ),
-                  CustomRoundedButtom(
-                    title: "LOGIN",
-                    onPressed: () {
-                      Navigator.of(context).pushAndRemoveUntil(
-                        PageTransition(
-                          child: DashboardScreens(),
-                          type: PageTransitionType.fade,
+    return Scaffold(
+      appBar: AppBar(backgroundColor: CustomTheme.primaryColor),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: CustomTheme.horizontalPadding,
+          ),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+                CustomTextField(
+                  label: "Email Address",
+                  hintText: "Enter Email Address",
+                  controller: _emailController,
+                  validator: (val) {
+                    if (val == null || val.isEmpty) {
+                      return "Email field cannot be empty";
+                    }
+                    final _isvalid = EmailValidator.validate(val);
+                    if (_isvalid) {
+                      return null;
+                    } else {
+                      return "Enter valid email address";
+                    }
+                  },
+                ),
+                CustomTextField(
+                  label: "Password",
+                  hintText: "Enter Password",
+                  controller: _passwordController,
+                  obscureText: true,
+                  validator: (val) {
+                    if (val == null || val.isEmpty) {
+                      return "Password field cannot be empty";
+                    } else if (val.length < 4) {
+                      return "Password field must be at least 4 character long";
+                    } else {
+                      return null;
+                    }
+                  },
+                ),
+                CustomRoundedButtom(
+                  title: "LOGIN",
+                  onPressed: () {
+                    Navigator.of(context).pushAndRemoveUntil(
+                      PageTransition(
+                        child: DashboardScreens(),
+                        type: PageTransitionType.fade,
+                      ),
+                      (route) => false,
+                    );
+                    // if (_formKey.currentState!.validate()) {}
+                  },
+                ),
+                const SizedBox(height: 20),
+                const Divider(height: 1),
+                const SizedBox(height: 20),
+                RichText(
+                  text: TextSpan(
+                    text: "Don't have account?",
+                    style: _textTheme.bodyText2,
+                    children: [
+                      TextSpan(
+                        text: " Sign Up",
+                        style: _textTheme.bodyText2!.copyWith(
+                          color: CustomTheme.primaryColor,
+                          fontWeight: FontWeight.w600,
                         ),
-                        (route) => false,
-                      );
-                      // if (_formKey.currentState!.validate()) {}
-                    },
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.of(context).push(
+                              PageTransition(
+                                child: SignupPages(),
+                                type: PageTransitionType.fade,
+                              ),
+                            );
+                          },
+                      )
+                    ],
                   ),
-                  const SizedBox(height: 20),
-                  const Divider(height: 1),
-                  const SizedBox(height: 20),
-                  RichText(
-                    text: TextSpan(
-                      text: "Don't have account?",
-                      style: _textTheme.bodyText2,
-                      children: [
-                        TextSpan(
-                          text: " Sign Up",
-                          style: _textTheme.bodyText2!.copyWith(
-                            color: CustomTheme.primaryColor,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.of(context).push(
-                                PageTransition(
-                                  child: SignupPages(),
-                                  type: PageTransitionType.fade,
-                                ),
-                              );
-                            },
-                        )
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                ],
-              ),
+                ),
+                const SizedBox(height: 20),
+              ],
             ),
           ),
         ),
