@@ -1,11 +1,14 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:ecommerce_app/common/custom_theme.dart';
+import 'package:ecommerce_app/features/auth/repository/user_repository.dart';
 import 'package:ecommerce_app/features/auth/ui/screens/login_page.dart';
 import 'package:ecommerce_app/features/cart/ui/screens/cart_page.dart';
 import 'package:ecommerce_app/features/homepage/ui/screens/homepage_screens.dart';
 import 'package:ecommerce_app/features/orders/ui/screens/order_screens.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -34,6 +37,8 @@ class _DashboardWidgetsState extends State<DashboardWidgets> {
         actions: [
           IconButton(
             onPressed: () {
+              context.read<UserRepository>().logout();
+              Fluttertoast.showToast(msg: "User logged out successfully");
               Navigator.pushAndRemoveUntil(
                 context,
                 PageTransition(
