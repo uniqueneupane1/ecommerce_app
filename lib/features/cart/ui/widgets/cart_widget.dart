@@ -20,17 +20,16 @@ class CartWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<UpdateCartQuantityCubit, CommonState>(
       listener: (context, state) {
-        if(state is CommonLoadingState) {
+        if (state is CommonLoadingState) {
           context.loaderOverlay.show();
         } else {
           context.loaderOverlay.hide();
         }
 
-
-        if(state is CommonSuccessState) {
+        if (state is CommonSuccessState) {
           context.read<FetchCartItemsCubit>().updateItems();
           Fluttertoast.showToast(msg: "Cart item updated");
-        } else if(state is CommonErrorState) {
+        } else if (state is CommonErrorState) {
           Fluttertoast.showToast(msg: state.message);
         }
       },
@@ -40,13 +39,29 @@ class CartWidget extends StatelessWidget {
             child: BlocBuilder<FetchCartItemsCubit, CommonState>(
               builder: (context, state) {
                 if (state is CommonSuccessState<List<Cart>>) {
-                  return ListView.builder(
-                    padding: EdgeInsets.only(top: 16),
-                    itemBuilder: (context, index) {
-                      return CartCard(cart: state.data[index]);
-                    },
-                    itemCount: state.data.length,
-                  );
+                  if (state.data.isNotEmpty) {
+                    return ListView.builder(
+                      padding: EdgeInsets.only(top: 16),
+                      itemBuilder: (context, index) {
+                        return CartCard(cart: state.data[index]);
+                      },
+                      itemCount: state.data.length,
+                    );
+                  } else {
+                    return Center(
+                      child: Container(
+                        padding: EdgeInsets.all(30),
+                        child: Text(
+                          "You have no item left in your cart. Please add it via product section !!",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  }
                 } else if (state is CommonErrorState) {
                   return Center(
                     child: Text(state.message),
@@ -105,7 +120,10 @@ class CartWidget extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             PageTransition(
-                              child: CheckoutPage(),
+                              child: BlocProvider.value(
+                                value: context.read<FetchCartItemsCubit>(),
+                                child: CheckoutPage(),
+                              ),
                               type: PageTransitionType.fade,
                             ),
                           );

@@ -76,7 +76,7 @@ class CartRepository {
     required InitiateOrderParam param,
   }) async {
     try {
-      final res = await _dio.put(
+      final res = await _dio.post(
         "${Constants.baseUrl}/orders",
         data: param.toMap(),
         options: Options(
@@ -85,8 +85,37 @@ class CartRepository {
           },
         ),
       );
+      _cartItems.clear();
       final order = Order.fromMap(res.data["results"]);
       return Right(order);
+    } on DioException catch (e) {
+      print(e);
+      return Left(
+          e.response?.data["message"] ?? "Unable to initiate order");
+    } catch (e) {
+      print(e);
+      return Left("Unable to initiate order");
+    }
+  }
+
+  Future<Either<String, void>> completePayment ({
+    required String orderId,
+    required String refId,
+  }) async {
+    try {
+      final _ = await _dio.post(
+        "${Constants.baseUrl}/orders/complete-payment",
+        data: {
+          "order_id": orderId,
+          "ref_id": refId,
+        },
+        options: Options(
+          headers: {
+            "Authorization": "Bearer ${userRepository.token}",
+          },
+        ),
+      );
+      return Right(null);
     } on DioException catch (e) {
       print(e);
       return Left(

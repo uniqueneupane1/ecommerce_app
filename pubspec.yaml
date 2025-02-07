@@ -52,6 +52,9 @@ dependencies:
   cached_network_image: ^3.4.1
   shimmer_animation: ^2.2.2
 
+  esewa_flutter_sdk:
+    path: ./esewa_flutter_sdk 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
